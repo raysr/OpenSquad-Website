@@ -1,0 +1,40 @@
+<% include header %>
+<div class="ui hidden divider"></div>
+<h1 class="ui header">Posts</h1>
+<div class="ui divider"></div>
+
+
+
+<div class="ui feed">
+
+
+
+<% for (post of locals.posts){ %>
+<div class="event">
+
+<div class="label">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRoBDTaXGDY5kDSGicoAu7-wRv4iiaQcOBJvQmMV_zZbu7g_VJ">
+</div>
+
+<div class="summary">
+<a class="user">
+<%= post.row.firstname %>
+</a>
+<%= post.row.content %>
+
+<div class="date">
+<%= post.date.fromNow() %>
+</div>
+<div class="meta">Categories : <%= post.row.categories %></div>
+
+</div>
+
+</div>
+
+<% } %>
+
+
+</div>
+
+
+<% include footer %>

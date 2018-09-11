@@ -1,0 +1,23 @@
+<% include header %>
+
+
+
+<form class="ui form" method="post" action="./newpost">
+  <div class="field">
+    <label>Title</label>
+    <input type="text" name="title" placeholder="Title of the article">
+  </div>
+  <div class="field">
+    <label>Content</label>
+    <textarea name="content"&></textarea>
+  </div>
+  <div class="field">
+    <label>Categories</label>
+    <input type="text" name="categories" placeholder="Categories">
+  </div>
+
+  <button class="ui button" type="submit">Submit</button>
+</form>
+
+
+<% include footer %>

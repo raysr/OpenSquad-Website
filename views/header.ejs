@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Open Squad</title>
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+  <link rel="icon" href="icon.png">
+</head>
+<body>
+
+
+
+<div class="ui secondary  menu">
+  <a href="./" class="active item">
+    Home
+  </a>
+   <% if(locals.username!==undefined){ %>
+  <a href="./newpost" class="item">
+    New Post
+  </a>
+ 
+  <a href="#" class="item">
+    My Profile
+  </a>
+   <% } %>
+  <div class="right menu">
+    <div class="item">
+      <div class="ui icon input">
+        <input type="text" placeholder="Search...">
+        <i class="search link icon"></i>
+      </div>
+    </div>
+    <% if(locals.username===undefined){ %>
+    <a href="./login" class="ui item">
+      Login
+    </a>
+    <% } else { %>
+      <p class="ui item"><%= locals.username %> </p>
+      <% } %>
+  </div>
+</div>
+
+<div class="ui main container">
+  <% if (locals.error!==undefined) { %>
+
+<div class="ui negative message">
+<%= error %>
+
+</div>
+
+<% } %>
+
+<% if (locals.success!==undefined) { %>
+
+<div class="ui positive message">
+<%= success %>
+
+</div>
+
+<% } %>
+
